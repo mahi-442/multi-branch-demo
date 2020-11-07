@@ -1,7 +1,7 @@
 pipeline{
     agent any
     stages{
-        stage(Deploy dev){
+        stage('Deploy Dev'){
             when{
                 branch 'devlopment'
             }
@@ -9,7 +9,7 @@ pipeline{
                 echo "Deploying to Dev environment"
             }
         }
-        stage(Deploy staging){
+        stage('Deploy Staging'){
             when{
                 branch 'staging'
             }
@@ -17,7 +17,7 @@ pipeline{
                 echo "Deploying to Staging environment"
             }
         }
-        stage(Deploy prod){
+        stage('Deploy Prod'){
             when{
                 branch 'master'
             }
